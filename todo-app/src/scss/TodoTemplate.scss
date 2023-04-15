@@ -1,0 +1,25 @@
+$indigo: #000080;
+$red: #FF0000;
+
+.TodoTemplate{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    border-radius: 5px;
+    overflow: hidden;
+    
+    .app-title{
+        background: $indigo;
+        color: white;
+        height: 8vh;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content{
+        background: white;
+    }
+}
