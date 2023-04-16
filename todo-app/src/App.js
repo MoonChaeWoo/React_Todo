@@ -5,7 +5,9 @@
  import TodoTemplate from './components/TodoTemplate';
 
 function App() {
-  return <TodoTemplate title="일정 관리">ToDo App 생성</TodoTemplate>;
+  return <TodoTemplate title="일정 관리">
+            <TodoInsert/>
+        </TodoTemplate>;
 }
 
 export default App;
