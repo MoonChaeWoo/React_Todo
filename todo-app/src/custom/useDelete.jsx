@@ -1,4 +1,4 @@
-const useDelete = ({itemTodo, useTodos}) => {
+const useDelete = (itemTodo, useTodos) => {
 
     const {todos, setTodos} = useTodos;
 
