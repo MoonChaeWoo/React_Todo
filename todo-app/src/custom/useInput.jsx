@@ -8,7 +8,7 @@ const useInput = (initialValue) => {
     //input 값 변경 시 이벤트
     const onChange = useCallback((e) => {
         setValue(e.target.value);
-    });
+    }, []);
 
     // 폼 submit 시 아이템 추가 이벤트
     const addFormItem = useCallback((e) => {
@@ -16,7 +16,7 @@ const useInput = (initialValue) => {
         let addObject = {id : todos.slice(-1)[0].id + 1, text : value, checked: false}
         setTodos([...todos,addObject]);
         setValue('');
-    }, [value]);
+    }, [setTodos, todos, value]);
 
     return {value, onChange, addFormItem};
 }

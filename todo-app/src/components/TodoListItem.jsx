@@ -5,15 +5,11 @@ import {
     MdRemoveCircleOutline
 } from 'react-icons/md';
 import cn from 'classnames';
+import { useDelete } from '../custom/useDelete';
 
 const TodoListItem = ({itemTodo, useTodos}) => {
 
-    const {todos, setTodos} = useTodos;
-
-    const removeItem = () => {
-        let item = todos.filter(item => item.id !== itemTodo.id);
-        setTodos(item);
-    }
+    const deletItem = useDelete({itemTodo, useTodos});
 
     return(
         <div className='TodoListItem'>
@@ -21,7 +17,7 @@ const TodoListItem = ({itemTodo, useTodos}) => {
                 {itemTodo.checked ? <MdCheckBox/> : <MdCheckBoxOutlineBlank/>}
                 <div className='text'>{itemTodo.text}</div>
             </div>
-            <div className='remove' onClick={() => {removeItem()}}>
+            <div className='remove' onClick={() => {deletItem.removeItem()}}>
                 <MdRemoveCircleOutline/>
             </div>
         </div>
