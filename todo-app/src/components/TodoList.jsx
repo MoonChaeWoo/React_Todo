@@ -1,9 +1,11 @@
 import '../scss/TodoList.scss'
 import TodoListItem from './TodoListItem';
 
-const TodoList = ({todos}) => {
+const TodoList = ({useTodos}) => {
 
-    const todosMap = todos.map(todo => <TodoListItem todo={todo} key={todo.id}/>);
+    const {todos, setTodos} = useTodos;
+
+    const todosMap = todos.map(todo => <TodoListItem useTodos={useTodos} itemTodo={todo} key={todo.id}/>);
 
     return(<div className="TodoList">{todosMap}</div>);
 }

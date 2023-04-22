@@ -28,7 +28,7 @@ function App() {
 
   return <TodoTemplate title="일정 관리">
             <TodoInsert useTodos={{todos, setTodos}}/>
-            <TodoList todos={todos}/>
+            <TodoList useTodos={{todos, setTodos}}/>
         </TodoTemplate>;
 }
 

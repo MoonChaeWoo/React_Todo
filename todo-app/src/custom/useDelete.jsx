@@ -1,0 +1,5 @@
+const useDelete = () => {
+    
+}
+
+export {useDelete};
